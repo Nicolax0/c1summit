@@ -1,0 +1,86 @@
+* {
+    background-color: #0c0b20;
+    margin: 0px;
+    font-weight: bold;
+    /* font-family: "Inconsolata", sans-serif; */
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #1A1846;
+}
+header * {
+    color: white;
+    background-color: #1A1846;
+    padding: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.options * {
+    font-weight: normal;
+}
+.logo {
+    font-size: 26px;
+    padding: 24px;
+}
+.mantra {
+    font-weight: normal;
+    font-size: 22px;
+}
+.left-cat {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px;
+    padding: 12px;
+    border-radius: 25px;
+    background-color: black;
+}
+.left-cat *{
+    background-color: black;
+}
+.achivements{
+    margin-top: 40px;
+}
+#goal1,#goal2,#goal3,#goal4,#goal5,#goal6,#goal7 {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-color: black;
+    text-align: left;
+    padding-top: 12px;
+    font-weight: normal;
+}
+.cont {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.right-cat {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px;
+    padding: 12px;
+    border-radius: 25px;
+    background-color: black;
+}
+.bottom {
+    display: flex;
+    width: 100%;
+    margin: 20px;
+    padding: 12px;
+    border-radius: 25px;
+    background-color: black;
+    justify-content: center;
+}
+.goal {
+    padding: 16px;
+    width: 30%;
+    border-radius: 25px;
+}

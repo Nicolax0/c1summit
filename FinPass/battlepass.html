@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="battlepass.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <href class="logo">FinPass</href>
+        <p class="mantra">Welcome Back, Example!</p>
+        <div class="options">
+            <href class="login">Logout</href>
+        </div>
+    </header>
+    
+    <div class="cont">
+        <div class="left-cat">
+            <div class="progressbox">
+                <p class="progressTitle">FinPass Monthly Progress Bar</p>
+                <div class="w3-light-grey">
+                    <div id="myBar" class="w3-container w3-green w3-center" style="width:30%">30</div>
+                </div>
+            </div>
+            <p class="achivements">Next Achivements</p>
+            <button id="goal1" onclick="move(1)">Invest 5% of your next paycheck into an index fund</button>
+            <button id="goal2" onclick="move(2)">Pay your morgage before 11/05</button>
+            <button id="goal3" onclick="move(3)">Spend no more than 50 dollars on take out this week</button>
+            <button id="goal4" onclick="move(4)">Pay 20% of your Discover Card balance early</button>
+            <button id="goal5" onclick="move(5)">Add an additional 20 dollars to your emergency fund</button>
+            <button id="goal6" onclick="move(6)">Cancel your American Airlines credit card</button>
+            <button id="goal7" onClick="move(7)">Invest 40 dollars into your Fundrise account</button>
+        </div>
+        <script>
+            function move(g){
+                if (g != 7){
+                    var audio = new Audio("resources/ding-126626.mp3");
+                    audio.play();
+                }
+                else{
+                    var audio = new Audio("resources/t.mp3");
+                    audio.play();
+                }
+                var elm = document.getElementById("myBar");
+                var width = Number(elm.innerHTML);
+                var id = setInterval(frame, 10);
+                function frame(){
+                    if (g == 1 && width >= 40){
+                        document.getElementById('goal1').remove();
+                        clearInterval(id);
+                    }
+                    else if (g == 2 && width >= 50){
+                        document.getElementById('goal2').remove();
+                        clearInterval(id);
+                    }
+                    else if (g == 3 && width >= 60){
+                        document.getElementById('goal3').remove();
+                        clearInterval(id);
+                    }
+                    else if (g == 4 && width >= 70){
+                        document.getElementById('goal4').remove();
+                        clearInterval(id);
+                    }
+                    else if (g == 5 && width >= 80){
+                        document.getElementById('goal5').remove();
+                        clearInterval(id);
+                    }
+                    else if (g == 6 && width >= 90){
+                        document.getElementById('goal6').remove();
+                        clearInterval(id);
+                    }
+                    else if (g == 7 && width >= 100){
+                        document.getElementById('goal7').remove();
+                        clearInterval(id);
+                    }
+                    else{
+                        width++;
+                        elm.style.width=width + '%';
+                        elm.innerHTML = width * 1;
+                    }
+                    
+                }
+            }
+        </script>
+        <div class="right-cat">
+            <img src="resources/Bank.png">
+        </div>
+    </div>
+    <div class="bottom">
+        <button class="goal">Set Goals</button>
+    </div>
+</body>
+</html>
